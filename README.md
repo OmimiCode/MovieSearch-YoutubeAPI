@@ -3,8 +3,7 @@
   - generate [YouTube API KEY](https://console.cloud.google.com/) following the [guide]()
   - [initialize spring progect](start.spring.io)
      ![alt text](image.jpg)
+#MORE ........ Docs 
 
-in the YouTubeService class!
 
-
-the application is launched, you can access it at [](http://movieyoutube-seaerch.herokuapp.com)
+the application is launched, you can access the application  [here](http://movieyoutube-seaerch.herokuapp.com)
