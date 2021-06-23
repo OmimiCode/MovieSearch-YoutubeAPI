@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Search | Home</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm  bg-body rounded">
+    <div class="container-xxl">
+        <a class="navbar-brand" href="#">
+            <img src="data:image/png;base64,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" w-50 h-25  width="100" height="50" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="document.location='./index'">New Search</button>
+    </div>
+</nav>
+
+<div class="container-sm  justify-content-center align-middle h-5 col-12 h-50 pt-5">
+    <h1>YouTube Search Results</h1>
+    <div class="alert alert-success"><span th:text="${numberOfVideos}"></span> videos match " <span th:text="${movieSearchCriteria.queryTerm}"></span> "</div>
+    <div class="d-flex align-items-center col-12 w-100 h-100 justify-content-center align-items-center shadow-sm " th:each="video : ${videos}">
+        <!--        frame-->
+        <div class="flex-shrink-0 col-5 me-2" >
+<!--       YOUTUBE PROPS     '?autoplay=1&mute=1&loop=1&control=1'-->
+            <div>
+                <a th:href="${video.url}" target="_blank"> <img alt="" th:src="${video.thumbnailUrl}" width="420" height="315"/>                                                     </a>
+            </div>
+<!--            OR-->
+<!--            <iframe width="420" height="315" th:src="${video.url}"></iframe>-->
+        </div>
+        <!--        details-->
+        <div  class="flex-grow-1 ms-4">
+            <h1><a class="text-decoration-none" th:href="${video.url}" target="_blank" th:text="${video.title}"></a></h1>
+            <h6  th:text="${video.publishDate}"></h6>
+            <p th:text="${video.description}"></p>
+        </div>
+    </div>
+
+</div>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
